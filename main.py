@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 import math
-from model_reader import Stl, Triangle, Vec3, Wavefront
+from model_reader import Wavefront
 
 if __name__ == '__main__':
-    wf = Wavefront.read("wavefront.obj")
+    wf = Wavefront.read("models/obj/wavefront.obj")
     stl = wf.stl()
 
-    print(wf)
-    print(wf.stl())
+    print("OBJ File:", wf)
+    print("STL File:", stl)
 
-    stl.write("model.edit.stl")
+    stl.write("models/stl/model.edit.stl")
